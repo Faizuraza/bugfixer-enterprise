@@ -497,8 +497,707 @@ BugFixer Enterprise is designed to serve multiple stakeholders across the softwa
 - Timely notifications
 
 
-9. User Journeys
-10. Functional Scope
+
+# 9. User Journeys
+
+BugFixer Enterprise supports multiple user journeys across the software development lifecycle.
+
+---
+
+## Journey 1 — Report a Bug
+
+Actor:
+QA Engineer
+
+Flow:
+
+Login
+
+↓
+
+Select Project
+
+↓
+
+Create Bug
+
+↓
+
+Enter Details
+
+↓
+
+Attach Files
+
+↓
+
+Assign Priority
+
+↓
+
+Submit
+
+↓
+
+Notification Sent
+
+↓
+
+Bug Created
+
+Outcome:
+
+The bug is available for investigation.
+
+---
+
+## Journey 2 — Assign a Bug
+
+Actor:
+Project Manager
+
+Flow:
+
+Open Bug
+
+↓
+
+Review Details
+
+↓
+
+Assign Developer
+
+↓
+
+Set Priority
+
+↓
+
+Set Due Date
+
+↓
+
+Notify Assignee
+
+Outcome:
+
+Developer receives assigned work.
+
+---
+
+## Journey 3 — Resolve a Bug
+
+Actor:
+Developer
+
+Flow:
+
+Review Bug
+
+↓
+
+Investigate
+
+↓
+
+Implement Fix
+
+↓
+
+Update Status
+
+↓
+
+Submit for QA
+
+Outcome:
+
+Bug moves to Testing.
+
+---
+
+## Journey 4 — Verify a Fix
+
+Actor:
+QA Engineer
+
+Flow:
+
+Open Bug
+
+↓
+
+Verify Build
+
+↓
+
+Test Fix
+
+↓
+
+Pass
+
+↓
+
+Close Bug
+
+or
+
+Fail
+
+↓
+
+Reopen Bug
+
+Outcome:
+
+Bug Closed or Reopened.
+
+---
+
+## Journey 5 — Engineering Monitoring
+
+Actor:
+Engineering Manager
+
+Flow:
+
+Login
+
+↓
+
+Open Dashboard
+
+↓
+
+Review KPIs
+
+↓
+
+Review Team Metrics
+
+↓
+
+Review Releases
+
+↓
+
+Review Critical Bugs
+
+↓
+
+Plan Sprint
+
+Outcome:
+
+Management gains actionable insights.
+
+---
+
+## Journey 6 — Organization Administration
+
+Actor:
+Organization Admin
+
+Flow:
+
+Login
+
+↓
+
+Manage Users
+
+↓
+
+Manage Teams
+
+↓
+
+Manage Roles
+
+↓
+
+Review Audit Logs
+
+↓
+
+Configure Settings
+
+Outcome:
+
+Organization remains secure and properly managed.
+
+
+# 10. Functional Scope
+
+This section defines the functional capabilities of BugFixer Enterprise Version 1.0 (MVP).
+
+Each functional requirement is assigned a unique identifier to maintain traceability throughout product planning, system architecture, implementation, testing, and future maintenance.
+
+---
+
+# Module Overview
+
+| Module ID | Module Name | Priority |
+|------------|-------------|----------|
+| AUTH | Authentication & Identity | Critical |
+| ORG | Organization Management | Critical |
+| TEAM | Team Management | High |
+| USER | User Management | High |
+| PROJ | Project Management | Critical |
+| BUG | Bug Management | Critical |
+| DASH | Dashboard & Analytics | Critical |
+| COMM | Comments & Collaboration | High |
+| FILE | File & Attachment Management | High |
+| NOTIF | Notification System | Medium |
+| SEARCH | Search & Filtering | High |
+| REPORT | Reporting & Analytics | Medium |
+| SETTINGS | Organization Settings | Medium |
+| AUDIT | Audit Logging | High |
+| AI | AI Assistant | Future |
+
+## AUTH — Authentication & Identity
+
+Purpose:
+
+Provide secure authentication and authorization for all platform users.
+
+### Functional Requirements
+
+AUTH-001
+
+User Login
+
+Priority:
+Critical
+
+---
+
+AUTH-002
+
+User Logout
+
+Priority:
+Critical
+
+---
+
+AUTH-003
+
+Password Reset
+
+Priority:
+High
+
+---
+
+AUTH-004
+
+Multi-Factor Authentication
+
+Priority:
+Future
+
+---
+
+AUTH-005
+
+Session Management
+
+Priority:
+Critical
+
+---
+
+AUTH-006
+
+Role-Based Access Control (RBAC)
+
+Priority:
+Critical
+
+---
+
+AUTH-007
+
+Organization-based Authentication
+
+Priority:
+Critical
+
+## ORG — Organization Management
+
+Purpose:
+
+Support multiple organizations within the same platform.
+
+### Functional Requirements
+
+ORG-001
+
+Create Organization
+
+---
+
+ORG-002
+
+Edit Organization
+
+---
+
+ORG-003
+
+Delete Organization
+
+---
+
+ORG-004
+
+Invite Members
+
+---
+
+ORG-005
+
+Manage Subscription
+
+---
+
+ORG-006
+
+Manage Organization Settings
+
+## TEAM — Team Management
+
+TEAM-001
+
+Create Team
+
+TEAM-002
+
+Update Team
+
+TEAM-003
+
+Delete Team
+
+TEAM-004
+
+Assign Members
+
+TEAM-005
+
+Assign Team Lead
+
+TEAM-006
+
+View Team Performance
+
+## USER — User Management
+
+USER-001
+
+View Users
+
+USER-002
+
+Update Profile
+
+USER-003
+
+Deactivate User
+
+USER-004
+
+Assign Roles
+
+USER-005
+
+Manage Permissions
+
+## PROJ — Project Management
+
+PROJ-001
+
+Create Project
+
+PROJ-002
+
+Edit Project
+
+PROJ-003
+
+Archive Project
+
+PROJ-004
+
+Assign Team
+
+PROJ-005
+
+View Project Dashboard
+
+PROJ-006
+
+Project Timeline
+
+PROJ-007
+
+Project Releases
+
+## BUG — Bug Management
+
+BUG-001
+
+Create Bug
+
+BUG-002
+
+Edit Bug
+
+BUG-003
+
+Delete Bug
+
+BUG-004
+
+Assign Bug
+
+BUG-005
+
+Update Status
+
+BUG-006
+
+Update Priority
+
+BUG-007
+
+Update Severity
+
+BUG-008
+
+Move Workflow
+
+BUG-009
+
+Duplicate Detection
+
+BUG-010
+
+Bug Timeline
+
+BUG-011
+
+Bug History
+
+BUG-012
+
+Bug Relationships
+
+BUG-013
+
+Bug Labels
+
+BUG-014
+
+Bug Watchers
+
+BUG-015
+
+Bug Attachments
+
+## DASH — Dashboard
+
+DASH-001
+
+Overview Dashboard
+
+DASH-002
+
+Bug Trends
+
+DASH-003
+
+Developer Analytics
+
+DASH-004
+
+Project Health
+
+DASH-005
+
+Critical Bug Monitoring
+
+DASH-006
+
+Resolution Metrics
+
+DASH-007
+
+Engineering KPIs
+
+## COMM — Collaboration
+
+COMM-001
+
+Comments
+
+COMM-002
+
+Mentions
+
+COMM-003
+
+Activity Timeline
+
+COMM-004
+
+Discussion Feed
+
+## FILE — Attachment Management
+
+FILE-001
+
+Upload Attachment
+
+FILE-002
+
+Preview Attachment
+
+FILE-003
+
+Download Attachment
+
+FILE-004
+
+Delete Attachment
+
+## SEARCH
+
+SEARCH-001
+
+Global Search
+
+SEARCH-002
+
+Advanced Filters
+
+SEARCH-003
+
+Saved Filters
+
+SEARCH-004
+
+Sort Results
+
+## NOTIF
+
+NOTIF-001
+
+In-App Notifications
+
+NOTIF-002
+
+Email Notifications
+
+NOTIF-003
+
+Assignment Notifications
+
+NOTIF-004
+
+Mention Notifications
+
+## REPORT
+
+REPORT-001
+
+Engineering Reports
+
+REPORT-002
+
+Bug Reports
+
+REPORT-003
+
+Project Reports
+
+REPORT-004
+
+Export PDF
+
+REPORT-005
+
+Export CSV
+
+## SETTINGS
+
+SETTINGS-001
+
+Profile
+
+SETTINGS-002
+
+Preferences
+
+SETTINGS-003
+
+Organization Settings
+
+SETTINGS-004
+
+Theme
+
+SETTINGS-005
+
+API Keys
+
+## AUDIT
+
+AUDIT-001
+
+Activity Logs
+
+AUDIT-002
+
+Security Logs
+
+AUDIT-003
+
+Permission Changes
+
+AUDIT-004
+
+Organization History
+
+## AI
+
+AI-001
+
+Bug Summary
+
+AI-002
+
+Duplicate Detection
+
+AI-003
+
+Severity Prediction
+
+AI-004
+
+Priority Recommendation
+
+AI-005
+
+Suggested Assignee
+
+AI-006
+
+Engineering Insights
+
 11. Non-Functional Requirements
 12. MVP Scope
 13. Out of Scope
