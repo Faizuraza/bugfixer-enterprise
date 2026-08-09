@@ -2123,8 +2123,235 @@ KPIs may be updated based on:
 - Business priorities
 - Engineering capacity
 
+# 15. Risks & Assumptions
 
-15. Risks & Assumptions
+## 15.1 Purpose
+
+This section identifies the known risks and key assumptions associated with the development of BugFixer Enterprise.
+
+Understanding these factors early allows the project team to proactively manage uncertainty, reduce technical debt, minimize delivery risks, and improve long-term maintainability.
+
+---
+
+# 15.2 Project Assumptions
+
+The following assumptions are considered valid throughout the development of Version 1.0 unless otherwise stated.
+
+### ASSUMP-001
+
+Development will follow an iterative Agile methodology with milestone-based delivery.
+
+---
+
+### ASSUMP-002
+
+A stable internet connection is available for all users accessing the SaaS platform.
+
+---
+
+### ASSUMP-003
+
+Users will access the platform using modern web browsers.
+
+---
+
+### ASSUMP-004
+
+Organizations are responsible for maintaining accurate project and user information.
+
+---
+
+### ASSUMP-005
+
+Authentication and identity management will be handled through Clerk.
+
+---
+
+### ASSUMP-006
+
+PostgreSQL will remain the primary production database.
+
+---
+
+### ASSUMP-007
+
+Version 1.0 focuses on web users only.
+
+Native mobile applications are outside the MVP scope.
+
+---
+
+### ASSUMP-008
+
+The platform will initially support English as the primary language.
+
+Internationalization will be introduced in future releases.
+
+---
+
+### ASSUMP-009
+
+Third-party integrations are not required for successful MVP delivery.
+
+---
+
+### ASSUMP-010
+
+Engineering documentation will be maintained alongside the codebase throughout development.
+
+---
+
+# 15.3 Risk Register
+
+| Risk ID | Risk Description | Probability | Impact | Mitigation |
+|----------|------------------|-------------|--------|------------|
+| RISK-001 | Scope creep during MVP development | High | High | Strict adherence to PRD and Change Control |
+| RISK-002 | Architecture decisions requiring major refactoring | Medium | High | Complete architecture and database design before implementation |
+| RISK-003 | Delays caused by introducing non-MVP features | High | Medium | Prioritize P0 requirements only |
+| RISK-004 | Performance degradation with large datasets | Medium | High | Database indexing, pagination, lazy loading, query optimization |
+| RISK-005 | Security vulnerabilities introduced during development | Medium | High | Secure coding standards, RBAC, validation, code reviews |
+| RISK-006 | Third-party service outages | Low | Medium | Graceful error handling and retry strategies |
+| RISK-007 | Inconsistent UI/UX as new screens are added | Medium | Medium | Centralized design system and reusable components |
+| RISK-008 | Technical debt caused by rushed implementation | Medium | High | Documentation-first development and architecture reviews |
+| RISK-009 | Loss of development consistency across AI sessions | Medium | High | Maintain `.ai` documentation and architecture documents |
+| RISK-010 | Data integrity issues | Low | High | Prisma transactions, constraints, validation, backups |
+
+---
+
+# 15.4 Technical Risks
+
+The project introduces several technical challenges that must be carefully managed.
+
+### Multi-Tenant Architecture
+
+Risk:
+
+Incorrect tenant isolation could expose one organization's data to another.
+
+Mitigation:
+
+Organization-aware authorization, database-level filtering, and comprehensive permission testing.
+
+---
+
+### Real-Time Features
+
+Risk:
+
+Socket connections may become difficult to scale as concurrent users increase.
+
+Mitigation:
+
+Design the notification layer to be replaceable and avoid coupling business logic to the real-time transport.
+
+---
+
+### File Storage
+
+Risk:
+
+Large attachment uploads may affect performance or storage costs.
+
+Mitigation:
+
+Use external object storage, validate uploads, enforce file size limits, and optimize asset delivery.
+
+---
+
+### Future AI Features
+
+Risk:
+
+AI recommendations may produce inaccurate results without sufficient data.
+
+Mitigation:
+
+Treat AI as an assistant rather than an authority. All recommendations remain user-reviewable.
+
+---
+
+# 15.5 Product Risks
+
+Potential product risks include:
+
+- Low user adoption due to unnecessary complexity.
+- Feature overload reducing usability.
+- Poor onboarding experience.
+- Incomplete bug reports leading to slower resolutions.
+- Over-customization increasing maintenance effort.
+
+Mitigation:
+
+Maintain a simple MVP, prioritize usability, and validate workflows before expanding feature scope.
+
+---
+
+# 15.6 Operational Risks
+
+Operational risks include:
+
+- Infrastructure outages.
+- Database failures.
+- Backup failures.
+- Monitoring gaps.
+- Deployment failures.
+
+Mitigation:
+
+- Automated backups.
+- Health monitoring.
+- Error tracking.
+- CI/CD validation.
+- Rollback procedures.
+
+---
+
+# 15.7 Risk Monitoring
+
+Project risks shall be reviewed throughout development.
+
+Review cadence:
+
+- Sprint Planning
+- Sprint Review
+- Architecture Review
+- Release Readiness Review
+
+Risks may be:
+
+- Closed
+- Mitigated
+- Accepted
+- Escalated
+
+based on project status.
+
+---
+
+# 15.8 Change Management
+
+Any significant change affecting:
+
+- Product scope
+- Architecture
+- Database
+- Security
+- Performance
+- Deployment
+
+must be evaluated before implementation.
+
+Every approved change shall include:
+
+- Business justification
+- Technical assessment
+- Estimated effort
+- Risk analysis
+- Approval record
+
+This ensures BugFixer Enterprise remains aligned with its product vision and architectural principles.
+
+
 16. Release Strategy
 17. Future Vision
 18. Glossary
