@@ -1198,8 +1198,575 @@ AI-006
 
 Engineering Insights
 
-11. Non-Functional Requirements
-12. MVP Scope
+# 11. Non-Functional Requirements
+
+Non-Functional Requirements define the quality attributes of BugFixer Enterprise. These requirements ensure the platform is secure, scalable, reliable, maintainable, and performant while providing a high-quality user experience.
+
+---
+
+## 11.1 Performance Requirements
+
+### NFR-PERF-001
+The application shall load the dashboard within **2 seconds** under normal operating conditions.
+
+Priority: Critical
+
+---
+
+### NFR-PERF-002
+API responses for standard CRUD operations shall complete within **300 milliseconds** under normal load.
+
+Priority: Critical
+
+---
+
+### NFR-PERF-003
+The system shall support pagination, lazy loading, and server-side filtering for large datasets.
+
+Priority: Critical
+
+---
+
+### NFR-PERF-004
+Charts and analytics shall load asynchronously without blocking the user interface.
+
+Priority: High
+
+---
+
+### NFR-PERF-005
+Images, attachments, and static assets shall be optimized for fast delivery.
+
+Priority: High
+
+## 11.2 Scalability Requirements
+
+### NFR-SCAL-001
+
+The platform shall support multiple organizations (multi-tenant architecture).
+
+Priority: Critical
+
+---
+
+### NFR-SCAL-002
+
+The architecture shall support horizontal scaling without major redesign.
+
+Priority: High
+
+---
+
+### NFR-SCAL-003
+
+The database shall support millions of bug records through indexing and optimized queries.
+
+Priority: High
+
+---
+
+### NFR-SCAL-004
+
+The application shall support future microservice migration without affecting business functionality.
+
+Priority: Future
+
+## 11.3 Security Requirements
+
+### NFR-SEC-001
+
+All users shall authenticate securely.
+
+Priority: Critical
+
+---
+
+### NFR-SEC-002
+
+Role-Based Access Control (RBAC) shall restrict access according to assigned permissions.
+
+Priority: Critical
+
+---
+
+### NFR-SEC-003
+
+All API inputs shall be validated on the server.
+
+Priority: Critical
+
+---
+
+### NFR-SEC-004
+
+Sensitive information shall never be stored in plaintext.
+
+Priority: Critical
+
+---
+
+### NFR-SEC-005
+
+The platform shall maintain an immutable audit trail for critical actions.
+
+Priority: High
+
+---
+
+### NFR-SEC-006
+
+Organizations shall be logically isolated to prevent unauthorized data access.
+
+Priority: Critical
+
+---
+
+### NFR-SEC-007
+
+Rate limiting shall protect public endpoints against abuse.
+
+Priority: High
+
+## 11.4 Reliability Requirements
+
+### NFR-REL-001
+
+The application shall recover gracefully from unexpected errors.
+
+Priority: Critical
+
+---
+
+### NFR-REL-002
+
+Background jobs shall automatically retry transient failures.
+
+Priority: Medium
+
+---
+
+### NFR-REL-003
+
+No user action shall result in silent data loss.
+
+Priority: Critical
+
+---
+
+### NFR-REL-004
+
+Database transactions shall guarantee data consistency for critical operations.
+
+Priority: Critical
+
+## 11.5 Availability Requirements
+
+### NFR-AVL-001
+
+Target production availability shall be **99.9% uptime**.
+
+Priority: High
+
+---
+
+### NFR-AVL-002
+
+The application shall support zero-downtime deployments where possible.
+
+Priority: Future
+
+---
+
+### NFR-AVL-003
+
+Health check endpoints shall be available for monitoring systems.
+
+Priority: High
+
+## 11.6 Maintainability Requirements
+
+### NFR-MNT-001
+
+The codebase shall follow Clean Architecture principles.
+
+Priority: Critical
+
+---
+
+### NFR-MNT-002
+
+Business logic shall remain independent of UI components.
+
+Priority: Critical
+
+---
+
+### NFR-MNT-003
+
+The platform shall maintain comprehensive technical documentation.
+
+Priority: Critical
+
+---
+
+### NFR-MNT-004
+
+Coding standards shall be enforced through automated linting and formatting.
+
+Priority: High
+
+## 11.7 Accessibility Requirements
+
+### NFR-ACC-001
+
+The application shall conform to WCAG 2.2 AA accessibility guidelines.
+
+Priority: High
+
+---
+
+### NFR-ACC-002
+
+Every interactive element shall be keyboard accessible.
+
+Priority: High
+
+---
+
+### NFR-ACC-003
+
+Forms shall provide meaningful validation messages.
+
+Priority: High
+
+---
+
+### NFR-ACC-004
+
+Color shall never be the only indicator of system state.
+
+Priority: High
+
+## 11.8 Observability Requirements
+
+### NFR-OBS-001
+
+Application errors shall be logged centrally.
+
+Priority: High
+
+---
+
+### NFR-OBS-002
+
+Performance metrics shall be continuously monitored.
+
+Priority: High
+
+---
+
+### NFR-OBS-003
+
+Audit logs shall record security-sensitive operations.
+
+Priority: Critical
+
+---
+
+### NFR-OBS-004
+
+System administrators shall have visibility into application health.
+
+Priority: High
+
+## 11.9 Compatibility Requirements
+
+The platform shall support the latest two major versions of:
+
+- Google Chrome
+- Microsoft Edge
+- Mozilla Firefox
+- Safari
+
+Responsive layouts shall support:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+## 11.10 Internationalization
+
+Future versions of BugFixer Enterprise shall support:
+
+- Multiple languages
+- Time zone awareness
+- Locale-aware formatting
+- Regional date/time preferences
+
+## 11.11 Compliance
+
+The application shall:
+
+- Maintain audit logs
+- Support secure password policies
+- Protect user privacy
+- Support secure backups
+- Comply with organization security standards
+
+# 12. Minimum Viable Product (MVP) Scope
+
+## 12.1 MVP Definition
+
+The Minimum Viable Product (MVP) of BugFixer Enterprise is the smallest complete version of the platform that enables software engineering teams to efficiently report, manage, assign, track, and resolve software defects while providing essential project visibility and collaboration.
+
+The MVP focuses on delivering a reliable, scalable, and intuitive bug management experience without introducing advanced enterprise or AI capabilities.
+
+The primary objective is to validate the product architecture, user workflows, and core business value while establishing a strong technical foundation for future releases.
+
+---
+
+# 12.2 MVP Principles
+
+The MVP shall:
+
+- Solve the complete bug lifecycle.
+- Support multiple organizations.
+- Enable collaboration between engineering teams.
+- Provide actionable engineering insights.
+- Maintain enterprise-grade security.
+- Be production-ready and scalable.
+
+Features that do not directly support these objectives will be deferred to future releases.
+
+---
+
+# 12.3 MVP Feature Prioritization
+
+The following prioritization model will be used throughout the project.
+
+| Priority | Meaning |
+|----------|---------|
+| P0 | Must Have (Required for Version 1.0) |
+| P1 | Should Have (High Priority) |
+| P2 | Could Have (Enhancement) |
+| P3 | Future Release |
+
+---
+
+# 12.4 P0 – Must Have Features (Version 1.0)
+
+## Authentication
+
+- User Login
+- User Logout
+- Session Management
+- Role-Based Access Control
+- Organization-based Authentication
+
+Priority: P0
+
+---
+
+## Organization Management
+
+- Create Organization
+- Invite Members
+- Manage Roles
+- Organization Settings
+
+Priority: P0
+
+---
+
+## Team Management
+
+- Create Team
+- Assign Members
+- Team Lead Assignment
+
+Priority: P0
+
+---
+
+## User Management
+
+- User Profile
+- User Roles
+- User Permissions
+
+Priority: P0
+
+---
+
+## Project Management
+
+- Create Project
+- Edit Project
+- Archive Project
+- Assign Team
+- Project Dashboard
+
+Priority: P0
+
+---
+
+## Dashboard
+
+- Overview Dashboard
+- Bug Trends
+- Bug Status Distribution
+- Resolution Metrics
+- Developer Workload
+- Recent Activity
+
+Priority: P0
+
+---
+
+## Bug Management
+
+- Create Bug
+- Edit Bug
+- Assign Bug
+- Update Status
+- Update Priority
+- Update Severity
+- Activity Timeline
+- Bug History
+- Labels
+- Watchers
+
+Priority: P0
+
+---
+
+## Collaboration
+
+- Comments
+- Mentions
+- Activity Feed
+
+Priority: P0
+
+---
+
+## Attachments
+
+- Upload Files
+- Preview Files
+- Download Files
+
+Priority: P0
+
+---
+
+## Search
+
+- Global Search
+- Filter by Status
+- Filter by Priority
+- Filter by Severity
+- Sorting
+
+Priority: P0
+
+---
+
+## Notifications
+
+- In-App Notifications
+- Assignment Notifications
+
+Priority: P0
+
+---
+
+## Audit Logging
+
+- Activity Log
+- Permission Changes
+- Status History
+
+Priority: P0
+
+---
+
+# 12.5 P1 – Should Have Features
+
+These features significantly improve the product but are not required for the initial release.
+
+- Email Notifications
+- Saved Filters
+- Project Templates
+- Release Management
+- Sprint Board
+- Calendar View
+- Team Analytics
+- Advanced Reports
+- Export CSV
+- Export PDF
+- Dark Mode
+- Keyboard Shortcuts
+- Bulk Operations
+- Custom Labels
+
+---
+
+# 12.6 P2 – Could Have Features
+
+These enhancements improve usability and productivity after the core platform is stable.
+
+- Time Tracking
+- Workload Planning
+- Personal Dashboards
+- User Bookmarks
+- Saved Views
+- Theme Customization
+- Public Project Portal
+- Mobile Responsive Optimizations
+- Browser Notifications
+
+---
+
+# 12.7 P3 – Future Features
+
+These capabilities represent the long-term product vision.
+
+- AI Bug Assistant
+- AI Bug Summaries
+- Duplicate Bug Detection
+- AI Severity Prediction
+- AI Priority Recommendation
+- AI Suggested Assignee
+- GitHub Integration
+- GitLab Integration
+- Slack Integration
+- Microsoft Teams Integration
+- Jenkins Integration
+- CI/CD Pipelines
+- Webhooks
+- Public API
+- Billing & Subscription Management
+- Marketplace Integrations
+- Native Mobile Application
+
+---
+
+# 12.8 MVP Success Criteria
+
+The MVP will be considered complete when:
+
+- Users can securely authenticate.
+- Organizations can manage projects and teams.
+- Bugs can be created, assigned, tracked, and resolved.
+- Engineering dashboards provide meaningful insights.
+- Collaboration is supported through comments and attachments.
+- Activity history is fully traceable.
+- All critical workflows are tested and documented.
+- The application is production deployable.
+
+
 13. Out of Scope
 14. Success Metrics
 15. Risks & Assumptions
