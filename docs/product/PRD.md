@@ -2954,6 +2954,141 @@ The product will continue evolving while maintaining its core principles:
 - Maintainability
 - Developer Experience
 
+# 18. Glossary
 
-18. Glossary
-19. References
+## 18.1 Purpose
+
+This glossary defines the key business, product, and technical terms used throughout the BugFixer Enterprise documentation.
+
+Maintaining a shared vocabulary ensures consistency across product planning, system design, development, testing, and future documentation.
+
+---
+
+## Terminology
+
+| Term | Definition |
+|------|------------|
+| Bug | A defect or issue in the software that causes incorrect or unexpected behavior. |
+| Bug Lifecycle | The sequence of states a bug passes through from creation to closure. |
+| Organization | A top-level tenant that owns projects, users, and teams. |
+| Project | A software initiative managed within an organization. |
+| Team | A group of users working together on one or more projects. |
+| User | Any authenticated individual using the platform. |
+| Role | A predefined collection of permissions assigned to a user. |
+| Permission | Authorization to perform a specific action within the platform. |
+| Reporter | A user who creates and submits bug reports. |
+| Assignee | The user responsible for resolving a bug. |
+| Priority | The urgency with which a bug should be addressed (Critical, High, Medium, Low). |
+| Severity | The technical impact of a bug on the system (Blocker, Critical, Major, Minor, Trivial). |
+| Status | The current stage of a bug within its lifecycle (Open, In Progress, Testing, Closed, etc.). |
+| Activity Log | A chronological record of significant events related to a bug or project. |
+| Attachment | A file associated with a bug, such as screenshots, logs, or recordings. |
+| Dashboard | The primary interface displaying engineering metrics and project insights. |
+| KPI | Key Performance Indicator used to measure product or engineering success. |
+| Audit Log | A tamper-resistant record of security-sensitive or administrative actions. |
+| Multi-Tenancy | An architecture where multiple organizations share the same application while their data remains logically isolated. |
+| RBAC | Role-Based Access Control, a security model that grants permissions through assigned roles. |
+| API | Application Programming Interface used for communication between software components. |
+| AI Assistant | Future module providing AI-powered recommendations and engineering insights. |
+| ADR | Architecture Decision Record documenting important technical decisions. |
+| PRD | Product Requirements Document defining the product vision and business requirements. |
+| SRS | Software Requirements Specification defining the detailed functional and technical requirements. |
+| MVP | Minimum Viable Product containing the essential functionality required for the initial release. |
+| DoR | Definition of Ready; criteria that must be met before development begins. |
+| DoD | Definition of Done; criteria that must be met before a feature is considered complete. |
+| CI/CD | Continuous Integration and Continuous Deployment pipeline used for automated testing and releases. |
+
+# 19. References & Supporting Documents
+
+## 19.1 Purpose
+
+This section lists the primary documents, standards, and architectural artifacts that support the development of BugFixer Enterprise.
+
+These documents collectively form the project's source of truth and shall be maintained throughout the product lifecycle.
+
+---
+
+## Project Documentation
+
+| Document | Purpose |
+|----------|---------|
+| README.md | Project overview and onboarding guide |
+| PRD.md | Product Requirements Document |
+| SRS.md | Software Requirements Specification |
+| ARCHITECTURE.md | High-level system architecture |
+| ROADMAP.md | Product roadmap and milestone planning |
+| ADR Repository | Architecture decision records |
+
+---
+
+## AI Documentation
+
+| Document | Purpose |
+|----------|---------|
+| .ai/PROJECT.md | Product context for AI-assisted development |
+| .ai/ARCHITECTURE.md | Architecture summary for AI tools |
+| .ai/CODING_STANDARDS.md | Development standards |
+| .ai/API_RULES.md | API implementation guidelines |
+| .ai/DATABASE_RULES.md | Database design standards |
+| .ai/UI_GUIDELINES.md | UI/UX implementation standards |
+
+---
+
+## External Standards
+
+The following industry standards influence the design and implementation of BugFixer Enterprise:
+
+- Semantic Versioning (SemVer)
+- REST API Design Principles
+- OWASP Application Security Guidelines
+- WCAG 2.2 AA Accessibility Guidelines
+- Twelve-Factor App Methodology
+- Clean Architecture Principles
+- SOLID Design Principles
+
+---
+
+## Technology References
+
+Primary technologies adopted by the project include:
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Prisma ORM
+- PostgreSQL
+- Clerk Authentication
+- Docker
+- Turborepo
+- pnpm
+
+---
+
+## Related Documentation
+
+The following documentation will be produced during subsequent project phases:
+
+- Database Design Specification
+- Entity Relationship Diagram (ERD)
+- API Specification
+- Authentication Specification
+- Authorization Model
+- Notification Design
+- Deployment Guide
+- Disaster Recovery Plan
+- Testing Strategy
+- Monitoring & Observability Guide
+
+---
+
+## Document Maintenance
+
+All project documentation shall:
+
+- Be version controlled.
+- Follow the established documentation template.
+- Be reviewed before major releases.
+- Remain synchronized with implementation changes.
+- Serve as the authoritative source for development decisions.
